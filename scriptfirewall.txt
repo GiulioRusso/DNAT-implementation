@@ -1,0 +1,24 @@
+﻿#!/bin/bash
+echo script Nat inverso
+
+#macchina 212
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9101 -j DNAT --to-destination 10.11.6.101:80
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9201 -j DNAT --to-destination 10.11.6.101:80
+#macchina 213
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9102 -j DNAT --to-destination 10.11.6.102:80
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9202 -j DNAT --to-destination 10.11.6.102:80
+#macchina 214
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9103 -j DNAT --to-destination 10.11.6.103:80
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9203 -j DNAT --to-destination 10.11.6.103:80
+#macchina 215
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9104 -j DNAT --to-destination 10.11.6.104:80
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9204 -j DNAT --to-destination 10.11.6.104:80
+#macchina 217
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9105 -j DNAT --to-destination 10.11.6.105:80
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9205 -j DNAT --to-destination 10.11.6.105:80
+#macchina 218
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9106 -j DNAT --to-destination 10.11.6.106:80
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9206 -j DNAT --to-destination 10.11.6.106:80
+#macchina 219
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9107 -j DNAT --to-destination 10.11.6.107:80
+iptables -t nat -I PREROUTING -i eth2 -d 10.11.4.100 -p tcp --dport 9207 -j DNAT --to-destination 10.11.6.107:80
